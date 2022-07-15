@@ -6,6 +6,6 @@
   - name: Install software
     ansible.builtin.package:
       name:
-        - zsh
+        - {{ AAP_pkg }}
       state: latest
 
