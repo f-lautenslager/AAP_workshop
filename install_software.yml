@@ -1,12 +1,11 @@
 ---
-- hosts: all
+- name: install software package
+  hosts: all
   gather_facts: false
   tasks:
   - name: Install software
-    hosts: all
-    gather_facts: false
-    tasks:
-      ansible.builtin.package:
+    ansible.builtin.package:
       name:
         - zsh
       state: latest
+
