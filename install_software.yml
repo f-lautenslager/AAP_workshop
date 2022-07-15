@@ -4,7 +4,7 @@
   gather_facts: false
   tasks:
   - name: Install software
-    ansible.builtin.dnf:
+    package:
       name:
         - "{{ my_pkg_name }}"
       state: latest
