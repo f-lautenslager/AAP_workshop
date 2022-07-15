@@ -6,6 +6,6 @@
   - name: Install software
     ansible.builtin.package:
       name:
-        - "{{ pkg_name }}"
+        - "{{ my_pkg_name }}"
       state: latest
 
