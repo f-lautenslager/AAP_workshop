@@ -1,0 +1,9 @@
+---
+- name: Install software
+  hosts: all
+  gather_facts: false
+  tasks:
+  ansible.builtin.package:
+    name:
+      - zsh
+    state: latest
