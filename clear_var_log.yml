@@ -1,0 +1,15 @@
+---
+- name: Cleanup
+  hosts: all
+  gather_facts: false
+  tasks:
+  - name: Collect files
+    shell: find /var/log -type f -mtime +7
+    register: matched_files_dirs
+    
+  - name: Remove files
+    become_user: root
+    file: 
+        path: "{{ item }}" 
+        state: absent
+    with_items: "{{ matched_files_dirs.stdout_lines }}"
