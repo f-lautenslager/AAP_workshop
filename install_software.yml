@@ -3,10 +3,9 @@
   hosts: all
   gather_facts: false
   tasks:
-  - name: Install software
-    yum:
-      name:
-        #- bc
-        - "{{ my_pkg_name }}"
-      state: latest
+  - name: install basic packages
+    action: >
+      {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
+    with_items:
+      - vim
 
