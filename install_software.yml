@@ -1,7 +1,7 @@
 ---
 - name: install software package
   hosts: all
-  gather_facts: false
+  gather_facts: true
   tasks:
   - name: install basic packages
     action: >
