@@ -6,7 +6,7 @@
   - name: Install software
     yum:
       name:
-        - bc
-        #- "{{ my_pkg_name }}"
+        #- bc
+        - "{{ my_pkg_name }}"
       state: latest
 
