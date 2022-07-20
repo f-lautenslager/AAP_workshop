@@ -1,11 +1,8 @@
+---
 - name: Gather facts
   hosts: all
-  gather_facts: true
+  gather_facts: True
   tasks:
-  - name: Collect only selected facts
-    ansible.builtin.setup:
-      filter:
-        - 'ansible_distribution'
-        - 'ansible_machine_id'
-        - 'ansible_*_mb'
-    cacheable: true
+    - name: Facts have been gathered
+      debug:
+        msg: "Facts are now gathered"
