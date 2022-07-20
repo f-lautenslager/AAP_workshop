@@ -8,3 +8,4 @@
         - 'ansible_distribution'
         - 'ansible_machine_id'
         - 'ansible_*_mb'
+    cacheable: true
