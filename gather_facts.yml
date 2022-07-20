@@ -1,4 +1,4 @@
-- name: Cleanup
+- name: Gather facts
   hosts: all
   gather_facts: true
   tasks:
